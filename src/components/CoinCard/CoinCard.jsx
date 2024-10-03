@@ -20,10 +20,10 @@ const CoinCard = ({ coin, onFlip }) => {
     const instructorImage = instructorImages[coin.name];
 
     return (
-        <div className="coin-card-wrapper">
+        <div className="coin-card-wrapper"><h3>{coin.name || 'Unknown Coin'}</h3>
             <div className={`coin-card ${flipped ? 'flipped' : ''}`} onClick={handleFlip}>
                 <div className="coin-card-front">
-                    <h3>{coin.name || 'Unknown Coin'}</h3>
+
                 </div>
                 <div className="coin-card-back">
                     {instructorImage ? (

@@ -52,7 +52,7 @@ const About = () => {
                 ))}
             </div>
 
-            {/* Dropdown Section should be here, above "What is BrainCoins?" */}
+
             {selectedCoin && isFlipped && (
                 <div className="coin-info-dropdown">
                     <h3>{selectedCoin.name}</h3>
