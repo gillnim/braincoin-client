@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import CoinCard from '../CoinCard/CoinCard';
-import './About.sass';
+import './About.scss';
 
 const About = () => {
     const coins = [
@@ -61,10 +61,31 @@ const About = () => {
                 </div>
             )}
 
-            <div className="about-app">
-                <h2>What is BrainCoins?</h2>
-                <p>BrainCoins is a fun, virtual currency system created for students to track their learning progress and reward engagement during the class...</p>
+            <div className="about-app fancy-section">
+                <h2 className="fancy-heading">What are BrainCoins?</h2>
+                <ul className="fancy-list">
+                    <li>
+                        <strong>Mark’s Tiny Baby Legs Fund:</strong> Mark’s running on baby legs, often switching places with his "twin" Mike. It’s hard to keep up, but his mom still loves him!
+                    </li>
+                    <li>
+                        <strong>Umer’s Meme Mansion:</strong> Umer’s building the ultimate Meme Mansion. Earn enough Umer Coins, and you might just get an invite to the grand opening!
+                    </li>
+                    <li>
+                        <strong>Jim’s Cat Kingdom:</strong> Jim dreams of a cat-filled utopia, and with every Neo Coin, you’re helping fund his feline ambitions. Meow!
+                    </li>
+                    <li>
+                        <strong>Kowsiya’s Green Thumb:</strong> Whether she’s hiking or gardening, Kowsiya’s nurturing minds and plants alike. Earn K-Bars and maybe score a gardening tip!
+                    </li>
+                    <li>
+                        <strong>Michelle’s Sweet Tech Journey:</strong> From baker to full-stack developer, Michelle swapped bread dough for code—her CorgiCoins are as sweet as her cakes used to be!
+                    </li>
+                </ul>
+                <li className="final-line">
+                    <strong>BrainCoins:</strong> Earn them, laugh hard, and turn learning into a rewarding adventure!
+                </li>
             </div>
+
+
         </div>
     );
 };
