@@ -1,4 +1,3 @@
-// src/components/Balance.js
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import BalanceTable from '../../components/BalanceTable/BalanceTable.jsx'; 
@@ -24,12 +23,12 @@ function Balance() {
         fetchBalances();
     }, []);
 
-    if (loading) return <div>Loading...</div>;
-    if (error) return <div>{error}</div>;
+    if (loading) return <div className="balance__loading">Loading...</div>;
+    if (error) return <div className="balance__error">{error}</div>;
 
     return (
-        <div>
-            <h1>User Balances</h1>
+        <div className="balance">
+            <h1 className="balance__title">User Balances</h1>
             <BalanceTable users={users} /> 
         </div>
     );
