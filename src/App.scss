@@ -1,0 +1,58 @@
+@use "./styles/partials/reset" as *;
+@use "./styles/partials/variables" as *;
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 14px;
+  display: flex;
+  background-color: #ECF39E;
+  color: #132A13;
+  justify-content: center;
+}
+button {
+  width: $px-150;
+  padding: 0 $px-32;
+  border: none;
+  border-radius: $px-4;
+  height: $px-40;
+  background-color: $mark-medium-green;
+  color: $mark-White;
+  &:hover {
+    border: 2px solid $mark-dark-green;
+  }
+}
+h2 {
+  font-size: 10rem;
+}
+textarea,
+input {
+  outline: 2px solid $mark-chartreuse;
+}
+input:focus {
+  outline: $px-2 solid $mark-dark-green;
+}
+textarea:focus {
+  outline: $px-2 solid $mark-dark-green;
+}
+input:invalid {
+  outline: $px-1 solid $BrainFlix-Red;
+}
+textarea:invalid {
+  outline: $px-1 solid $BrainFlix-Red;
+}
+::placeholder {
+  color: $mark-dark-green;
+  align-items: center;
+  font-size: $px-13;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+::selection {
+  background-color: $mark-chartreuse;
+  color: $mark-White;
+}
