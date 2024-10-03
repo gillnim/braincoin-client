@@ -1,6 +1,6 @@
 .coin-card {
-    width: 9.375rem;
-    height: 9.375rem;
+    width: 9.375rem; // This is the size of the circular card
+    height: 9.375rem; // Keep height equal to width for a perfect circle
     perspective: 62.5rem;
     margin: 0.625rem;
     cursor: pointer;
@@ -31,6 +31,17 @@
         background-color: #f44336;
         color: white;
         transform: rotateY(180deg);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%; // Ensure the back remains circular
+
+        .instructor-image {
+            width: 100%; // Take full width of the container
+            height: 100%; // Take full height of the container
+            border-radius: 50%; // Keep the image circular
+            object-fit: cover; // Ensure the image covers the entire area while maintaining aspect ratio
+        }
     }
 
     &.flipped .coin-card-front {
