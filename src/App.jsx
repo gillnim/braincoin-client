@@ -6,7 +6,6 @@ import './App.scss'
 import BalancePage from './pages/BalancePage/BalancePage.jsx'
 
 function App() {
-
   return (
     <BrowserRouter>
     <Routes>
@@ -16,4 +15,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
