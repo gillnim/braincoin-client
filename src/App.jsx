@@ -12,10 +12,10 @@ function App() {
   return (
     <BrowserRouter>
       <Header />
-      <About />
       <Toaster richColors position="top-right" />
       <CurrencyConverter />
       <Routes>
+        <Route path="/" element={<About />} />
         <Route path="/balance" element={<BalancePage />} />
         <Route path="/top-ten" element={<TopTenPage />} />
         <Route path="*" element={<h1>Page Not Found 🙈</h1>} />

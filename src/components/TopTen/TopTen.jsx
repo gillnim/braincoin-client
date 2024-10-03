@@ -15,17 +15,12 @@ function TopTen({users}) {
                 </thead>
                 <tbody>
                     {users.map(function(user, index) {
-                        const totalValue = (user['Umer coins'] || 0) * (100 / 500) +
-                                           (user['Mark bucks'] || 0) +
-                                           (user['Kowsiya'] || 0) * (500) +
-                                           (user['CorgiCoins'] || 0) * (500) +
-                                           (user['Neo Coins'] || 0) * (1000);
 
                         return (
                             <tr key={user.name}>
                                 <td className="top-ten__cell">{index + 1}</td>
                                 <td className="top-ten__cell">{user.name}</td>
-                                <td className="top-ten__cell">{totalValue.toFixed(2)}</td>
+                                <td className="top-ten__cell">{user.totalValueInMarkBucks}</td>
                             </tr>
                         );
                     })}
