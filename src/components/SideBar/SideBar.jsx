@@ -22,7 +22,7 @@ function Sidebar() {
       </div>
       <div className="main-content">
         <h1>Welcome to Braincoins!</h1>
-        <p>Click the icon to convert your custom currencies.</p>
+        <p>Click the icon 💰 to convert your custom currencies.</p>
       </div>
     </div>
   );

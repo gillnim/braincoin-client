@@ -1,0 +1,82 @@
+.about-page {
+  padding: 20px;
+  text-align: center;
+}
+.coins-inline {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+.fancy-section {
+  background-color: #FFFBFB;
+  border-radius: 20px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  animation: fadeIn 0.8s ease-in-out;
+  padding: 1rem;
+}
+.fancy-heading {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #4CAF50;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  animation: slideDown 0.8s ease-in-out;
+}
+.coin-info-dropdown {
+  background-color: lightsalmon;
+  border-radius: 45px;
+}
+.fancy-list {
+  list-style-type: none;
+  padding: 0;
+  li {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 1.2rem;
+    padding-left: 1.5rem;
+    position: relative;
+    color: #555;
+    &:hover {
+      background-color: #F1F1F1;
+      border-radius: 10px;
+      padding: 0.8rem 1.5rem;
+      transition: background-color 0.3s ease-in-out;
+    }
+  }
+  .final-line {
+    font-size: larger;
+    text-align: center;
+    font-size: 1.4rem;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+// Slide down animation for the heading
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+// Custom grow-in animation for bullet points
+@keyframes growIn {
+  to {
+    transform: scale(1);
+  }
+}
