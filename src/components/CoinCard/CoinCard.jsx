@@ -1,19 +1,21 @@
 import React, { useState } from 'react';
 import './CoinCard.scss';
 
-const CoinCard = ({ coin }) => {
-    const [expanded, setExpanded] = useState(false);
+const CoinCard = ({ coin, onFlip }) => {
+    const [flipped, setFlipped] = useState(false);
+
+    const handleFlip = () => {
+        setFlipped(!flipped);
+        onFlip(coin, !flipped);
+    };
 
     return (
-        <div className="coin-card" onClick={() => setExpanded(!expanded)}>
-            <img src={coin.image} alt={coin.name} className="coin-image" />
-            <h3>{coin.name}</h3>
-            {expanded && (
-                <div className="coin-details">
-                    <p>{coin.description}</p>
-                    <p>Conversion Rate to Mark Bucks: {coin.conversionRateToMarkBucks}</p>
+        <div className="coin-card-wrapper">
+            <div className={`coin-card ${flipped ? 'flipped' : ''}`} onClick={handleFlip}>
+                <div className="coin-card-front">
+                    <h3>{coin.name || 'Unknown Coin'}</h3>
                 </div>
-            )}
+            </div>
         </div>
     );
 };

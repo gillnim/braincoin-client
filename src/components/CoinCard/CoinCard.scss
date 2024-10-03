@@ -1,0 +1,43 @@
+.coin-card {
+    width: 9.375rem;
+    height: 9.375rem;
+    perspective: 62.5rem;
+    margin: 0.625rem;
+    cursor: pointer;
+    position: relative;
+    border-radius: 50%;
+
+    .coin-card-front,
+    .coin-card-back {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        backface-visibility: hidden;
+        transition: transform 0.6s ease-in-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 0.0625rem solid #ddd;
+        border-radius: 50%;
+        box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    }
+
+    .coin-card-front {
+        background-color: #4caf50;
+        color: white;
+    }
+
+    .coin-card-back {
+        background-color: #f44336;
+        color: white;
+        transform: rotateY(180deg);
+    }
+
+    &.flipped .coin-card-front {
+        transform: rotateY(180deg);
+    }
+
+    &.flipped .coin-card-back {
+        transform: rotateY(0deg);
+    }
+}

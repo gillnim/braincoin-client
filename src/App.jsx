@@ -1,12 +1,14 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './components/Home/Home'
 import About from './components/About/About';
+import Header from './components/Header/Header';
 
 function App() {
   return (
-    <>
-    </>
+    <div className='BrainCoins'>
+      <h1>Hello</h1>
+      <Header />
+      <About />
+    </div>
   )
 }
 
