@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { toast } from "sonner"; 
+import './CurrencyConvertorPage.scss'
+
 function CurrencyConverter() {
   const [formData, setFormData] = useState({
     amount: "",

@@ -5,15 +5,16 @@ import { Toaster } from "sonner";
 
 import BalancePage from './pages/BalancePage/BalancePage.jsx'
 import TopTenPage from './pages/TopTenPage/TopTenPage';
-import CurrencyConverter from './pages/CurrencyConvertorPage/CurrencyConvertorPage.jsx';
 import Header from './components/Header/Header.jsx';
 import About from './components/About/About';
+import Sidebar from './components/SideBar/SideBar.jsx';
+
 function App() {
   return (
     <BrowserRouter>
       <Header />
       <Toaster richColors position="top-right" />
-      <CurrencyConverter />
+      <Sidebar />
       <Routes>
         <Route path="/" element={<About />} />
         <Route path="/balance" element={<BalancePage />} />
